@@ -1,6 +1,4 @@
-# GlowAgenda v2
-
-![GlowAgenda Logo](public/img/logo.png)
+# GlowAgenda 
 
 Um sistema completo de agendamento para salões de beleza, desenvolvido com tecnologias modernas para oferecer uma experiência excepcional tanto para clientes quanto para profissionais.
 
