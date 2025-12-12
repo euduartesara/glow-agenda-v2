@@ -1,11 +1,13 @@
 "use client";
 
+
 import { useState } from "react";
 import {
   UserIcon,
   CreditCardIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 type Step = 1 | 2 | 3;
 
@@ -25,6 +27,7 @@ interface FormData {
 }
 
 export default function CheckoutForm() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState<Step>(1);
   const [formData, setFormData] = useState<FormData>({
     nome: "",
@@ -62,6 +65,9 @@ export default function CheckoutForm() {
     e.preventDefault();
     console.log("Dados do formulário:", formData);
     alert("Pagamento realizado com sucesso!");
+     setTimeout(() => {
+      router.push("/dashboard");
+    }, 800);
   };
 
   const steps = [
