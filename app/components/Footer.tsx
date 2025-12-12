@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   CalendarDaysIcon,
   PhoneIcon,
@@ -21,10 +22,10 @@ export default function Footer() {
             Agende agora mesmo e garanta seu horário com nossos profissionais
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold text-purple-700 shadow-lg transition-transform duration-200 hover:-translate-y-0.5">
+            <Link href="/pagamento" className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-semibold text-purple-700 shadow-lg transition-transform duration-200 hover:-translate-y-0.5">
               <CalendarDaysIcon className="h-5 w-5" aria-hidden />
               Contratar
-            </button>
+            </Link>
             <button className="inline-flex items-center gap-2 rounded-full border border-white/70 px-7 py-3 text-sm font-semibold text-white transition duration-200 hover:bg-white/10">
               <PhoneIcon className="h-5 w-5" aria-hidden />
               Contato
