@@ -1,9 +1,19 @@
+"use client";
+
+import { useState } from "react";
 import "../dashboard/dashboard.css";
 import Sidebar from "../dashboard/Sidebar";
 import ServicesStatsCards from "../dashboard/ServicesStatsCards";
+import ServicesFilters from "../dashboard/ServicesFilters";
 import ServicesList from "../dashboard/ServicesList";
 
 export default function ServicosPage() {
+  const [activeFilter, setActiveFilter] = useState("Todos");
+
+  const handleFilterChange = (filter: string) => {
+    setActiveFilter(filter);
+  };
+
   return (
     <div className="dashboard-container">
       <Sidebar />
@@ -29,18 +39,11 @@ export default function ServicosPage() {
 
         <ServicesStatsCards />
 
-        <div style={{ marginTop: 20, marginBottom: 20 }}>
-          <div style={{ width: 480 }}>
-            <input
-              placeholder="Buscar por nome ou categoria..."
-              style={{ width: "100%", padding: "12px 16px", borderRadius: 12, border: "1px solid #E6E6E6", background: "white" }}
-            />
-          </div>
-        </div>
+        <ServicesFilters onFilterChange={handleFilterChange} />
 
         <div style={{ display: "flex", gap: 20 }}>
           <div style={{ flex: 1 }}>
-            <ServicesList />
+            <ServicesList filter={activeFilter} />
           </div>
         </div>
       </main>
