@@ -2,11 +2,33 @@
 
 import "./sidebar.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaHome, FaCalendarAlt, FaUser, FaCut, FaChartBar, FaCog, FaSignOutAlt } from "react-icons/fa";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch("/api/auth/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Redirecionar para login após logout bem-sucedido
+        router.push("/login");
+      } else {
+        alert("Erro ao fazer logout");
+      }
+    } catch (error) {
+      console.error("Erro ao fazer logout:", error);
+      alert("Erro ao fazer logout");
+    }
+  };
 
   return (
     <aside className="sidebar">
@@ -24,7 +46,7 @@ export default function Sidebar() {
         <Link href="/dashboard/configuracoes" className={`menu-item ${pathname === "/dashboard/configuracoes" ? "active" : ""}`}><FaCog /> Configurações</Link>
       </nav>
 
-      <button className="exit">
+      <button className="exit" onClick={handleLogout}>
         <FaSignOutAlt />
         Sair
       </button>
