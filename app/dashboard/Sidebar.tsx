@@ -21,7 +21,7 @@ export default function Sidebar() {
         <Link href="#" className="menu-item"><FaUser /> Clientes</Link>
         <Link href="#" className="menu-item"><FaCut /> Serviços</Link>
         <Link href="/relatorios" className={`menu-item ${pathname === "/relatorios" ? "active" : ""}`}><FaChartBar /> Relatórios</Link>
-        <Link href="#" className="menu-item"><FaCog /> Configurações</Link>
+        <Link href="/dashboard/configuracoes" className={`menu-item ${pathname === "/dashboard/configuracoes" ? "active" : ""}`}><FaCog /> Configurações</Link>
       </nav>
 
       <button className="exit">
