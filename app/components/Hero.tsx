@@ -51,7 +51,7 @@ export default function Hero() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Novo por aqui?
             </h2>
-            <p className="text-gray-600 mb-5 md:mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-5 md:mb-6 leading-relaxed min-h-[6.5rem] md:min-h-[7rem]">
               Descubra nossos serviços premium de beleza e bem-estar. Agende com facilidade e transforme seu visual.
             </p>
             <button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
@@ -70,7 +70,7 @@ export default function Hero() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Já é cliente?
             </h2>
-            <p className="text-gray-600 mb-5 md:mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-5 md:mb-6 leading-relaxed min-h-[6.5rem] md:min-h-[7rem]">
               Acesse sua conta para gerenciar agendamentos, visualizar histórico e aproveitar seus benefícios.
             </p>
             <button className="w-full bg-transparent border-2 border-purple-600 hover:bg-purple-50 text-purple-600 font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
