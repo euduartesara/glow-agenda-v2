@@ -96,7 +96,7 @@ export default function Cadastro() {
         {/* Card de cadastro */}
         <div className="bg-white rounded-3xl p-8 shadow-2xl">
           {/* Icon */}
-          <div className="mb-6 md:mb-8 flex justify-center">
+          <div className="mb-3 md:mb-4 flex justify-center">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-100 rounded-2xl flex items-center justify-center">
               <svg className="h-6 w-6 md:h-7 md:w-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
@@ -105,7 +105,7 @@ export default function Cadastro() {
           </div>
 
           {/* Título e subtítulo */}
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-center text-gray-900 mb-2">
+          <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-center text-gray-900 mb-2">
             Criar Conta Gratuita
           </h1>
           <p className="text-center text-gray-600 mb-8 text-sm">
@@ -259,13 +259,13 @@ export default function Cadastro() {
             </div>
 
             {/* Checkbox Termos */}
-            <div className="flex items-start gap-3 pt-2">
+            <div className="flex items-center gap-3 pt-2">
               <input
                 type="checkbox"
                 name="aceitoTermos"
                 checked={formData.aceitoTermos}
                 onChange={handleChange}
-                className="mt-1 h-5 w-5 text-purple-600 rounded cursor-pointer"
+                className="h-5 w-5 text-purple-600 rounded cursor-pointer flex-shrink-0"
               />
               <label className="text-sm text-gray-600 cursor-pointer">
                 Eu aceito os{' '}
@@ -283,7 +283,7 @@ export default function Cadastro() {
             {/* Botão Criar Conta */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 mt-6 flex items-center justify-center gap-2"
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 mt-3 flex items-center justify-center gap-2"
             >
               Criar Conta Gratuita
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
