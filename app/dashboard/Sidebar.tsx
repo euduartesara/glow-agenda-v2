@@ -20,7 +20,7 @@ export default function Sidebar() {
         <Link href="/agendamentos" className={`menu-item ${pathname === "/agendamentos" ? "active" : ""}`}><FaCalendarAlt /> Agendamentos</Link>
         <Link href="#" className="menu-item"><FaUser /> Clientes</Link>
         <Link href="#" className="menu-item"><FaCut /> Serviços</Link>
-        <Link href="#" className="menu-item"><FaChartBar /> Relatórios</Link>
+        <Link href="/relatorios" className={`menu-item ${pathname === "/relatorios" ? "active" : ""}`}><FaChartBar /> Relatórios</Link>
         <Link href="#" className="menu-item"><FaCog /> Configurações</Link>
       </nav>
 
