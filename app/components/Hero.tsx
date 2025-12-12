@@ -74,10 +74,10 @@ export default function Hero() {
             <p className="text-gray-600 mb-5 md:mb-6 leading-relaxed min-h-[6.5rem] md:min-h-[7rem]">
               Acesse sua conta para gerenciar agendamentos, visualizar histórico e aproveitar seus benefícios.
             </p>
-            <button className="w-full bg-transparent border-2 border-purple-600 hover:bg-purple-50 text-purple-600 font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
+            <Link href="/login" className="w-full bg-transparent border-2 border-purple-600 hover:bg-purple-50 text-purple-600 font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 inline-flex">
               Fazer Login
               <ArrowRightIcon className="h-5 w-5" aria-hidden />
-            </button>
+            </Link>
           </div>
         </div>
 
