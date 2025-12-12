@@ -4,7 +4,7 @@ Um sistema completo de agendamento para salões de beleza, desenvolvido com tecn
 
 ## ✨ Sobre o Projeto
 
-O GlowAgenda v2 é uma plataforma web completa para gerenciamento de salões de beleza, permitindo agendamento online, controle de serviços, gestão de clientes e relatórios detalhados. Desenvolvido com foco na usabilidade e performance, o sistema oferece uma interface moderna e intuitiva.
+O GlowAgenda é uma plataforma web completa para gerenciamento de salões de beleza, permitindo agendamento online, controle de serviços, gestão de clientes e relatórios detalhados. Desenvolvido com foco na usabilidade e performance, o sistema oferece uma interface moderna e intuitiva.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -213,9 +213,9 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 ## 👥 Equipe
 
-- **Desenvolvimento**: Kauã Luiz
-- **Design**: Equipe GlowBeauty
-- **Projeto**: Euduar Duarte Sara
+- **Desenvolvimento**: David, Kauã
+- **Design**: Carlos, Marcos 
+- **Projeto**: Equipe GlowAgenda
 
 ## 📞 Suporte
 
@@ -225,4 +225,4 @@ Para suporte técnico ou dúvidas:
 
 ---
 
-**GlowAgenda v2** - Transformando a gestão de salões de beleza com tecnologia e elegância. ✨💅
+**GlowAgenda** - Transformando a gestão de salões de beleza com tecnologia e elegância. ✨💅
