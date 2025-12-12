@@ -20,23 +20,22 @@ export default function ServicesFilters({ onFilterChange }: ServicesFiltersProps
     <div className="card-box" style={{
       marginTop: 20,
       marginBottom: 20,
-      width: "258.25px",
-      height: "108px",
-      padding: "20px",
+      width: "1105px",
+      height: "68px",
+      padding: "16px",
       display: "flex",
-      flexWrap: "wrap",
-      gap: "8px",
-      alignContent: "flex-start"
+      alignItems: "center",
+      gap: "12px"
     }}>
       {filters.map((filter) => (
         <button
           key={filter}
           onClick={() => handleFilterClick(filter)}
           style={{
-            padding: "6px 12px",
+            padding: "8px 16px",
             borderRadius: "8px",
             border: "none",
-            fontSize: "12px",
+            fontSize: "14px",
             fontWeight: 600,
             cursor: "pointer",
             transition: "all 0.2s ease",
@@ -44,7 +43,11 @@ export default function ServicesFilters({ onFilterChange }: ServicesFiltersProps
               ? "linear-gradient(90deg, #9810FA, #FF4DA6)"
               : "#F3F4F6",
             color: activeFilter === filter ? "white" : "#6B7280",
-            minWidth: "70px"
+            minWidth: "80px",
+            height: "36px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
           }}
         >
           {filter}
