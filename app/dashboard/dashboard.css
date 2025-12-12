@@ -25,16 +25,31 @@
   box-shadow: 0 3px 12px rgba(0,0,0,0.05);
 }
 
+/* Make primary text darker inside cards for better visibility */
+.card-box, .card-box p, .card-box span, .card-box small {
+  color: #111827;
+}
+
 .metric-title {
-  color: #444;
+  color: #111827;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  margin: 8px 0 4px 0;
 }
 
 .metric-number {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 800;
   margin-top: 10px;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.metric-subtitle {
+  font-size: 12px;
+  color: #4B5563;
+  margin: 0;
+  font-weight: 600;
 }
 
 .metric-icon {
@@ -47,10 +62,12 @@
   align-items: center;
   color: white;
   font-size: 20px;
+  margin-bottom: 12px;
 }
 
 .section-title {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 30px 0 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #111827;
 }
