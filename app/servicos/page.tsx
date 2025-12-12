@@ -5,7 +5,7 @@ import "../dashboard/dashboard.css";
 import Sidebar from "../dashboard/Sidebar";
 import ServicesStatsCards from "../dashboard/ServicesStatsCards";
 import ServicesFilters from "../dashboard/ServicesFilters";
-import ServicesList from "../dashboard/ServicesList";
+import ServicesGrid from "../dashboard/ServicesGrid";
 
 export default function ServicosPage() {
   const [activeFilter, setActiveFilter] = useState("Todos");
@@ -43,7 +43,7 @@ export default function ServicosPage() {
 
         <div style={{ display: "flex", gap: 20 }}>
           <div style={{ flex: 1 }}>
-            <ServicesList filter={activeFilter} />
+            <ServicesGrid filter={activeFilter} />
           </div>
         </div>
       </main>
