@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRightIcon,
   ArrowRightOnRectangleIcon,
@@ -54,10 +55,10 @@ export default function Hero() {
             <p className="text-gray-600 mb-5 md:mb-6 leading-relaxed min-h-[6.5rem] md:min-h-[7rem]">
               Descubra nossos serviços premium de beleza e bem-estar. Agende com facilidade e transforme seu visual.
             </p>
-            <button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
+            <Link href="/cadastro" className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 inline-flex">
               Conhecer o GlowAgenda
               <ArrowRightIcon className="h-5 w-5" aria-hidden />
-            </button>
+            </Link>
           </div>
 
           {/* Card 2 - Já é cliente */}
