@@ -4,6 +4,7 @@ import "./sidebar.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaHome, FaCalendarAlt, FaUser, FaCut, FaChartBar, FaCog, FaSignOutAlt } from "react-icons/fa";
+import { ScissorsIcon } from "@heroicons/react/24/outline";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -11,8 +12,15 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="logo">
-        <h2>GlowAgenda</h2>
-        <p>Gerenciamento</p>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div style={{ width: "32px", height: "32px", background: "linear-gradient(135deg, #9810FA, #FF4DA6)", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <ScissorsIcon style={{ width: "16px", height: "16px", color: "white" }} />
+          </div>
+          <div>
+            <h2>GlowAgenda</h2>
+            <p>Gerenciamento</p>
+          </div>
+        </div>
       </div>
 
       <nav className="menu">
