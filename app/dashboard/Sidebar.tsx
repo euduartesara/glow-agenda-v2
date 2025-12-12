@@ -1,9 +1,13 @@
 "use client";
 
 import "./sidebar.css";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaHome, FaCalendarAlt, FaUser, FaCut, FaChartBar, FaCog, FaSignOutAlt } from "react-icons/fa";
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
   return (
     <aside className="sidebar">
       <div className="logo">
@@ -12,12 +16,12 @@ export default function Sidebar() {
       </div>
 
       <nav className="menu">
-        <a className="menu-item active"><FaHome /> Dashboard</a>
-        <a className="menu-item"><FaCalendarAlt /> Agendamentos</a>
-        <a className="menu-item"><FaUser /> Clientes</a>
-        <a className="menu-item"><FaCut /> Serviços</a>
-        <a className="menu-item"><FaChartBar /> Relatórios</a>
-        <a className="menu-item"><FaCog /> Configurações</a>
+        <Link href="/dashboard" className={`menu-item ${pathname === "/dashboard" ? "active" : ""}`}><FaHome /> Dashboard</Link>
+        <Link href="/agendamentos" className={`menu-item ${pathname === "/agendamentos" ? "active" : ""}`}><FaCalendarAlt /> Agendamentos</Link>
+        <Link href="#" className="menu-item"><FaUser /> Clientes</Link>
+        <Link href="#" className="menu-item"><FaCut /> Serviços</Link>
+        <Link href="#" className="menu-item"><FaChartBar /> Relatórios</Link>
+        <Link href="#" className="menu-item"><FaCog /> Configurações</Link>
       </nav>
 
       <button className="exit">

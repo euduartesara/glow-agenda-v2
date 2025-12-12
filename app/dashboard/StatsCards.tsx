@@ -11,6 +11,7 @@ export default function StatsCards() {
         </div>
         <p className="metric-title">Clientes Hoje</p>
         <p className="metric-number">8</p>
+        <p className="metric-subtitle">+123 vs ontem</p>
       </div>
 
       {/* Confirmados */}
@@ -20,6 +21,7 @@ export default function StatsCards() {
         </div>
         <p className="metric-title">Confirmados</p>
         <p className="metric-number">6</p>
+        <p className="metric-subtitle">2 confirmados</p>
       </div>
 
       {/* Receita Hoje */}
@@ -29,6 +31,7 @@ export default function StatsCards() {
         </div>
         <p className="metric-title">Receita Hoje</p>
         <p className="metric-number">R$ 170</p>
+        <p className="metric-subtitle">+189 vs ontem</p>
       </div>
 
       {/* Próximo Cliente */}
@@ -38,6 +41,7 @@ export default function StatsCards() {
         </div>
         <p className="metric-title">Próximo Cliente</p>
         <p className="metric-number">11:00</p>
+        <p className="metric-subtitle">Ana Costa</p>
       </div>
 
     </div>

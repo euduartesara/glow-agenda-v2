@@ -14,11 +14,8 @@ export default function Dashboard() {
         <DashboardHeader />
         <StatsCards />
 
-        <div style={{ display: "flex", marginTop: "30px" }}>
-          <div style={{ flex: 1 }}>
-            <ScheduleList />
-          </div>
-
+        <div style={{ display: "flex", marginTop: "0px", gap: 0 }}>
+          <ScheduleList />
           <CalendarBox />
         </div>
       </main>
