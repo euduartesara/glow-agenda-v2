@@ -1,4 +1,5 @@
 import "./dashboard.css";
+import "./poppins.css";
 import Sidebar from "./Sidebar";
 import DashboardHeader from "./DashboardHeader";
 import StatsCards from "./StatsCards";
