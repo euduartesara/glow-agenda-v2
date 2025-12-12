@@ -18,8 +18,8 @@ export default function Sidebar() {
       <nav className="menu">
         <Link href="/dashboard" className={`menu-item ${pathname === "/dashboard" ? "active" : ""}`}><FaHome /> Dashboard</Link>
         <Link href="/agendamentos" className={`menu-item ${pathname === "/agendamentos" ? "active" : ""}`}><FaCalendarAlt /> Agendamentos</Link>
-        <Link href="#" className="menu-item"><FaUser /> Clientes</Link>
-        <Link href="#" className="menu-item"><FaCut /> Serviços</Link>
+        <Link href="/dashboard/clientes" className={`menu-item ${pathname === "/dashboard/clientes" ? "active" : ""}`}><FaUser /> Clientes</Link>
+        <Link href="/dashboard/servicos" className={`menu-item ${pathname === "/dashboard/servicos" ? "active" : ""}`}><FaCut /> Serviços</Link>
         <Link href="/relatorios" className={`menu-item ${pathname === "/relatorios" ? "active" : ""}`}><FaChartBar /> Relatórios</Link>
         <Link href="/dashboard/configuracoes" className={`menu-item ${pathname === "/dashboard/configuracoes" ? "active" : ""}`}><FaCog /> Configurações</Link>
       </nav>
