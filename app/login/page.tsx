@@ -1,16 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Login() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: '',
     senha: '',
     lembrarMe: false,
   });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -18,11 +22,41 @@ export default function Login() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
     }));
+    setError(''); // Limpar erro ao digitar
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Login enviado:', formData);
+    setError('');
+    setLoading(true);
+
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.senha,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || 'Erro ao fazer login');
+        setLoading(false);
+        return;
+      }
+
+      // Login bem-sucedido, redirecionar para o dashboard
+      router.push('/dashboard');
+    } catch (err) {
+      console.error('Erro ao fazer login:', err);
+      setError('Erro ao conectar com o servidor');
+      setLoading(false);
+    }
   };
 
   return (
@@ -75,6 +109,13 @@ export default function Login() {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Mensagem de erro */}
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+
             {/* Email */}
             <div>
               <label className="block text-xs font-medium text-gray-700 mb-1.5">
@@ -127,9 +168,10 @@ export default function Login() {
             {/* Botão Entrar */}
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 text-sm mt-1"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 text-sm mt-1 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Entrar
+              {loading ? 'Entrando...' : 'Entrar'}
             </button>
 
             {/* Voltar */}
